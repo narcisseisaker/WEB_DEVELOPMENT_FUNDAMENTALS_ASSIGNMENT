@@ -1,0 +1,134 @@
+/* CSS Portfolio Colors*/
+.primary{
+    color: rgb(211, 104, 104);
+}
+.secondary{
+    color:hsl(33, 100%, 88%)
+}
+.neutral{
+    color:#614e4e;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header h1, header nav{
+    display: inline-block;
+    margin: 30px 50px;
+}
+/* header h1{
+    color: rgb(211, 104, 104);
+} */
+header nav{
+    float: right;
+    padding-top: 15px;
+}
+header nav a{
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid rgb(211, 104, 104);
+    border-radius: 13px;
+}
+header nav a:hover{
+    color: rgb(236, 185, 185);
+}
+header nav a:active{
+    color: rgb(70, 4, 40);
+    outline: none;
+}
+.main-container{
+    margin: 0 130px;
+}
+main #about-me, main #my-projects, main #contact{
+    margin-bottom: 50px;
+}
+#my-projects .project-cards{
+    width: 1270px;
+}
+#my-projects .project-cards .first-project-card,
+#my-projects .project-cards .second-project-card,
+#my-projects .project-cards .third-project-card{
+    width: 400px;
+    height: 300px;
+    display: inline-block;
+    margin-left: 10px;
+    border: 3px solid rgb(211, 104, 104);
+    border-radius: 15px;
+}
+.first-project-card img,
+.second-project-card img,
+.third-project-card img{
+    width: 400px;
+    height: 190px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+.first-project-card .project-summary,
+.second-project-card .project-summary,
+.third-project-card .project-summary{
+    text-align: center;
+}
+#contact #form .input-textarea-border{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+#contact #form input{
+    width: 1250px;
+    height: 50px;
+}
+#contact #form textarea{
+    width: 1250px;
+    height: 300px;
+}
+#contact #form input:focus, #contact #form textarea:focus{
+    border-color: rgb(180, 38, 38);
+    outline: none;
+}
+.btn{
+    text-decoration: none;
+    margin-top: 2px;
+    padding: 6px;
+    color: white;
+    border: 2px solid rgb(211, 104, 104);
+    border-radius: 10px;
+    background-color: #611010;
+}
+.btn-alt{
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+.footer{
+    height: 150px;
+    padding-top: 30px;
+    text-align: center;
+    background: linear-gradient(#000000, gray);
+    background-size: cover;
+     color: white;
+}
+.footer nav{
+    margin: 20px;
+}
+.footer nav a{
+    text-decoration: none;
+     color: white;
+    margin: 5px;
+    font-weight: 600;
+}
+.footer nav a:hover{
+    opacity: 0.3;
+}
+.header-footer-box-shadow{
+    background-color: #fff;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+.box-shadow{
+    background-color: #fff;
+    
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}

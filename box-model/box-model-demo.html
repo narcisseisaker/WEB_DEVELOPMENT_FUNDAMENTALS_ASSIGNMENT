@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Demo</title>
+    <style>
+        /* The inline elements don't change when applying the box model properties. 
+        When there not enough space in width, it continues in the next line*/
+        .inline-elements .s1{
+            color: red;
+        }
+        .inline-elements .s2{
+            color: yellow;
+        }
+        .inline-elements .s3{
+            color: green;
+        }
+        .inline-elements .s4{
+            color: blue;
+        }
+        .inline-elements .s5{
+            color: violet;
+        }
+        
+        /* Inline-block elements just take the necessary width bettween it parent elementcontainer
+        Also, the box model properties is applicable to them */
+        .first, .second, .third{
+           display: inline-block;
+           width: 400 px;
+           margin: 20px;
+           height: 35px;
+           padding: 20px;
+           border: 3px solid green;
+        }
+        /* Block elements are displayed vertically because,
+         each of then take the full space available in the
+          parent element container*/
+          .p-block{
+             width: 600px;
+             height: 100px;
+             margin: 30px;
+             padding: 15px;
+             border: 5px dashed magenta;
+
+          }
+          .full-parent-size{
+            border: 2px solid rosybrown;
+            
+          }
+          /* One of the elements associated with the class specific-color
+           inherit the color rgb(224, 131, 16) of it parent which is the class
+            associated with the container class. The other child element of 
+            the same parent defined its own color which is red, so it used it */
+         .container{
+            color: rgb(224, 131, 16);
+         }
+         .container .specific-color{
+            color: red;
+         }
+         .inline .inline{
+            border: 1px solid blue;
+            color: red;
+         }
+         .inline-block h1, .inline-block p{
+            display: inline-block;
+            border: 2px solid green;
+            margin: 2px;
+            padding: 2px;
+            width: 300px;
+            height: 100px;
+         }
+         .block div{
+            border: 2px solid green;
+            margin: 2px;
+            padding: 2px;
+            width: 300px;
+            height: 100px;
+         }
+         .diagram-section{
+            border: 2px solid magenta;
+         }
+    </style>
+</head>
+<body>
+    <!-- They don't change with any box model property.
+    -->
+    <section class="inline-elements">
+          <span class="s1">Inline element1</span> 
+           <span class="s2">Inline element2</span>
+           <span class="s3">Inline element3</span>
+           <span class="s4">Inline element4</span> 
+           <span class="s5">Inline element5</span> <br><br>
+           <strong>
+            The inline elements don't change when applying the box model properties. 
+        When there not enough space, it continues in the next line. They are not resizable
+           </strong> 
+
+    </section>
+
+    <section class ="inline-block-elements">
+         <div class="first">First inline-block element</div>
+         <div class="second">Second inline-block element</div>
+         <div class="third">Third inline-block element </div>
+         <strong>
+            Inline-block elements just take the necessary width bettween it parent element 
+            container. Also, the box model properties is applicable to them. They are resizable
+         </strong>
+    </section>
+
+    <section class="block-elements">
+        <p class="p-block">First block element.</p>
+        <p class="p-block">Second block element.</p>
+      <strong>
+        Block elements are displayed vertically because,
+         each of then take the full space available in the
+          parent element container. They are resizable
+      </strong>
+    <!--By default, a block element take up full width of is parent.-->
+    <div class="full-parent-size">
+        I am the chancelor of this space and I don't want to see anyone here.
+         I use all the place available in my parent container. don't try me. If you do,
+          you will see the other side of me.  I am the chancelor of this space and I don't want to see anyone here.
+         I use all the place available in my parent container. don't try me. If you do,
+          you will see the other side of me
+    </div>
+    <!--By default, the nested element uses the styles of its parent.-->
+        <div class="container">
+            <h3>content of the nexted element</h3>
+            <p>I love CSS inheritance because it allow me to uses<br>
+                the styles of my parents by default. My parent as a <br>
+                 <span>rgb(224, 131, 16) color. So, I use it by default 
+                 until I change it by myself</span>
+            </p>
+            <p class="specific-color"><br>
+                    The color of my parent isn't the one I need. So, 
+                    I change it with the <em>red one</em>
+             </p>
+        </div>
+
+    </section>
+<section class="diagram-section">
+    <h1>Diagram section</h1>
+    <div class="inline">
+        <h1>inline elements</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellat quo cum,
+         illo debitis tenetur qui maxime velit ab
+          exercitationem  Accusamus
+        <span class="inline">Inline element1</span>
+        <strong class="inline">inline element2</strong> Accusamus
+         repellat optio
+         <ul>
+            <li>An inline-level element occupy only the necessary space</li>
+            <li>It doesn't accept property use to resize a box like height and width. It is not resizable</li>
+            <li>It behaviour is allowed by the property display with the value of inline</li>
+        </ul>
+   </div>
+   <div class="inline-block">
+    <h1>Inline-block element</h1>
+    <p>This is a paragraph and a p element is an <br>
+    inline block element
+    </p>
+    <ul>
+        <li>inline-block elements don't occupy all the available width of the parent container</li>
+        <li>It is resizable</li>
+        <li>The size of an element add borders and padding sizes to the content size
+            in the calculation</li>
+        <li>It behaviour is allowed by the property display with the value of inline-block</li>
+        <li>With the actual styling of padding 2px, margin 2px, height 100px and width 300px,
+            the total size of the box is 308 X 108 and not 300 X 100
+        </li>
+        <li></li>
+    </ul>
+   </div>
+   <div class="block">
+    <div>First block element</div>
+    <div>Second block element</div>
+    <div>Third bloc element</div>
+    <ul>
+        <li>Every bloc-level element occupy the full width of is parent</li>
+        <li>It is resizable</li>
+        <li>The size of an element add borders and padding sizes to the content size
+            in the calculation</li>
+        <li>It behaviour is allowed by the property display with the value of block</li>
+        <li>With the actual styling of padding 2px, margin 2px, height 100px and width 300px,
+            the total size of the box is 308 X 108 and not 300 X 100
+        </li>
+    </ul>
+   </div>
+
+</section>
+</body>
+</html>
