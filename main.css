@@ -1,13 +1,12 @@
-/* CSS Portfolio Colors*/
-.primary{
+/* CSS Portfolio palette Colors*/
+:root {
+  --primary: rgb(211, 104, 104);
+  --secondary: hsl(33, 100%, 88%);
+  --neutral: #614e4e;
+}
+/* .primary{
     color: rgb(211, 104, 104);
-}
-.secondary{
-    color:hsl(33, 100%, 88%)
-}
-.neutral{
-    color:#614e4e;
-}
+
 body{
     margin: 0;
     padding: 0;
@@ -29,6 +28,7 @@ header nav a{
     margin: 5px;
     border: 1px solid rgb(211, 104, 104);
     border-radius: 13px;
+    color: var(--neutral);
 }
 header nav a:hover{
     color: rgb(236, 185, 185);
@@ -36,6 +36,9 @@ header nav a:hover{
 header nav a:active{
     color: rgb(70, 4, 40);
     outline: none;
+}
+header h1, main #about-me h2, main #my-projects h2, main #contact h2{
+    color: var(--primary);
 }
 .main-container{
     margin: 0 130px;
@@ -68,6 +71,7 @@ main #about-me, main #my-projects, main #contact{
 .second-project-card .project-summary,
 .third-project-card .project-summary{
     text-align: center;
+    color: var(--neutral);
 }
 #contact #form .input-textarea-border{
     border: 1px solid black;
